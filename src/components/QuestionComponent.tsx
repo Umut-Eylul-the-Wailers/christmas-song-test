@@ -1,5 +1,6 @@
 import React from 'react';
 import { Question } from '../types/types';
+import '../styles/App.css'
 
 interface QuestionComponentProps {
   question: Question;
@@ -21,6 +22,7 @@ const QuestionComponent: React.FC<QuestionComponentProps> = ({
             type="radio"
             id={`${question.id}-${index}`}
             name={question.id}
+            className='radioButton'
             value={index}
             checked={selectedAnswer === index}
             onChange={() => onAnswer(question.id, index)}
@@ -33,7 +35,7 @@ const QuestionComponent: React.FC<QuestionComponentProps> = ({
             <img
               src={option.photo}
               alt={option.text}
-              style={{ width: '50px', height: '50px', marginLeft: '10px' }}
+              style={{ width: '150px', height: '150px', marginLeft: '10px' }}
             />
           )}
         </div>

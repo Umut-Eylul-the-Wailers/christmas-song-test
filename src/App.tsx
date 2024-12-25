@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Question } from './types/types';
 import QuestionComponent from './components/QuestionComponent';
-import ResultComponent from './components/ResultComponent'; // Import ResultComponent
+import ResultComponent from './components/ResultComponent';
+import './styles/App.css' 
 
 // Import questions from the other script
 import { questions as externalQuestions } from './data/question'; // Replace with the correct path
@@ -58,11 +59,13 @@ const App: React.FC = () => {
             <p>Loading questions...</p>
           )}
           <h2>Your total score: {calculateScore()}</h2>
-          <button onClick={handleEnd}>Finish</button>
+          <button onClick={handleEnd} className='finishButton'>Finish</button>
         </>
       )}
+      
     </div>
   );
+
 };
 
 export default App;
