@@ -7,23 +7,31 @@ interface ResultComponentProps {
 }
 
 const ResultComponent: React.FC<ResultComponentProps> = ({ score, onEnd }) => {
-  // Define result based on score
+  
   let resultText = '';
   let resultImage = '';
   let songSrc = ''
 
   if (score <= 4) {
     resultText = 'You are a beginner!';
-    resultImage = '/public'; // Replace with your image
+    resultImage = '/public/img/1.jpg';     
+    //songSrc = '<iframe src="https://open.spotify.com/embed/track/4uu9CHl4b4l6vE5sArH3mT?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
+
   } else if (score <= 8) {
-    resultText = 'You have some experience!';
-    resultImage = '/img'; // Replace with your image
+    resultText = '/img/1.jpg';
+    resultImage = '/public/img'; 
+    //songSrc = '<iframe src="https://open.spotify.com/embed/track/4uu9CHl4b4l6vE5sArH3mT?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
+
   } else if (score <= 12) {
     resultText = 'You are quite skilled!';
-    resultImage = '/images/skilled.jpg'; // Replace with your image
+    resultImage = '/public/img/1.jpg'; 
+    //songSrc = '<iframe src="https://open.spotify.com/embed/track/4uu9CHl4b4l6vE5sArH3mT?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
+
   } else {
     resultText = 'You are an expert!';
-    resultImage = '/images/expert.jpg'; // Replace with your image
+    resultImage = '/public/img/1.jpg'; 
+    //songSrc = '<iframe src="https://open.spotify.com/embed/track/4uu9CHl4b4l6vE5sArH3mT?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
+
   }
 
   return (

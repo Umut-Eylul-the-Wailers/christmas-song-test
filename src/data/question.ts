@@ -4,7 +4,7 @@ import { Question } from '../types/types';
 export const questions: Question[] = [
   {
     id: 'q1',
-    text: 'How much do you like programming?',
+    text: 'How much are you excited for christmas?',
     options: [
       { text: 'Not at all', photo: '/img/1.jpg' },
       { text: 'A little', photo: '/img/1.jpg' },
@@ -15,7 +15,7 @@ export const questions: Question[] = [
   },
   {
     id: 'q2',
-    text: 'How often do you code?',
+    text: 'How often do you think about christmas?',
     options: [
       { text: 'Rarely', photo: '/img/1.jpg' },
       { text: 'Once a week', photo: '/img/1.jpg' },
